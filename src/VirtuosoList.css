@@ -1,3 +1,7 @@
+.MuiListItemText-primary {
+    text-transform: capitalize;
+}
+
 .MuiListItemText-secondary {
     font-size: 1rem!important;
 }
