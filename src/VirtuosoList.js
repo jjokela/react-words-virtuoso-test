@@ -4,7 +4,7 @@ import List from '@mui/material/List'
 import ListSubheader from '@mui/material/ListSubheader'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
-import React, { useState, useMemo, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { clickChange$ } from "./state";
 
 export default function VirtuosoList() {

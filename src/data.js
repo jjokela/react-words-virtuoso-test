@@ -15,14 +15,6 @@ export function getWords() {
 
 const randomHeight = () => Math.floor(Math.random() * 30 + 24)
 
-const generateRandomItems = (count) => {
-    return Array.from({ length: count }).map((_, i) => ({
-        text: `Item ${i + 1}`,
-        height: randomHeight(),
-        longText: faker.lorem.paragraphs(1),
-    }))
-}
-
 const generated = []
 
 export function toggleBg(index) {

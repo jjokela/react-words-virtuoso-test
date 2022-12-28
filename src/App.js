@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Kortti from './Kortti';
 import VirtuosoList from './VirtuosoList';
 import { Container } from '@mui/system';
 import Loora from './Loora';
