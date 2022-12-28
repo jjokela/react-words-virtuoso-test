@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import React, { useState, useRef, useEffect } from 'react'
 import { clickChange$ } from "./state";
+import './VirtuosoList.css';
 
 export default function VirtuosoList() {
 
@@ -46,7 +47,7 @@ export default function VirtuosoList() {
                     const word = data[index]
                     return (
                         <>
-                            <ListItemText primary={word.word} secondary={<span>{JSON.parse(word.content)}</span>} />
+                            <ListItemText sx={{ fontSize: '1rem' }}  primary={word.word} secondary={<span>{JSON.parse(word.content)}</span>} />
                         </>
                     )
                 }}
