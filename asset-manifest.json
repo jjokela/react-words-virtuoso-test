@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-words-virtuoso-test/static/css/main.073c9b0a.css",
-    "main.js": "/react-words-virtuoso-test/static/js/main.cf567ab4.js",
+    "main.css": "/react-words-virtuoso-test/static/css/main.52409e9b.css",
+    "main.js": "/react-words-virtuoso-test/static/js/main.c09f4fdf.js",
     "static/js/787.d8629f47.chunk.js": "/react-words-virtuoso-test/static/js/787.d8629f47.chunk.js",
     "index.html": "/react-words-virtuoso-test/index.html",
-    "main.073c9b0a.css.map": "/react-words-virtuoso-test/static/css/main.073c9b0a.css.map",
-    "main.cf567ab4.js.map": "/react-words-virtuoso-test/static/js/main.cf567ab4.js.map",
+    "main.52409e9b.css.map": "/react-words-virtuoso-test/static/css/main.52409e9b.css.map",
+    "main.c09f4fdf.js.map": "/react-words-virtuoso-test/static/js/main.c09f4fdf.js.map",
     "787.d8629f47.chunk.js.map": "/react-words-virtuoso-test/static/js/787.d8629f47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.cf567ab4.js"
+    "static/css/main.52409e9b.css",
+    "static/js/main.c09f4fdf.js"
   ]
 }
