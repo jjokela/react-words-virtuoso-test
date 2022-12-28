@@ -1,7 +1,7 @@
 {
   "name": "react-card-and-virtual-table",
   "version": "0.1.0",
-  "homepage": "https://jjokela.github.io/words-virtuoso-test",
+  "homepage": "https://jjokela.github.io/react-words-virtuoso-test",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
