@@ -13,8 +13,11 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
-import { setClick } from './state';
+import { setClick, setShowAll, setShowSelected } from './state';
 
 export default function TemporaryDrawer() {
     const [state, setState] = React.useState({
@@ -85,6 +88,22 @@ export default function TemporaryDrawer() {
                             >
                                 <MenuIcon />
                             </IconButton>
+                            <MenuItem onClick={setShowSelected}>
+                                <IconButton
+                                    size="large"
+                                    color="inherit"
+                                >
+                                    <TaskAltIcon />
+                                </IconButton>                                
+                            </MenuItem>
+                            <MenuItem onClick={setShowAll}>
+                                <IconButton
+                                    size="large"
+                                    color="inherit"
+                                >
+                                    <AllInclusiveIcon />
+                                </IconButton>
+                            </MenuItem>
                         </Toolbar>
                     </AppBar>
                 </Box>

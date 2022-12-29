@@ -4,6 +4,16 @@ import React from 'react'
 import { faker } from '@faker-js/faker';
 import data from './data/words.json'
 
+export function getCheckedWords(checked) {
+
+    const filteredWords = data.filter(x => checked.includes(x.index));
+    const groupedWords = groupBy(filteredWords, (word) => word.word.toLowerCase()[0])
+    const groupCounts = Object.values(groupedWords).map((words) => words.length)
+    const groups = Object.keys(groupedWords)
+  
+    return { data: filteredWords, groupCounts, groups }
+  }
+
 export function getWords() {
 
     const groupedWords = groupBy(data, (word) => word.word.toLowerCase()[0])
