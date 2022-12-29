@@ -99,7 +99,7 @@ export default function VirtuosoList() {
     return (
         <div>
             <GroupedVirtuoso
-                style={{ height: 800 }}
+                style={{ height: '90vh' }}
                 ref={virtuoso}
                 groupCounts={groupCounts}
                 components={MUIComponents}
