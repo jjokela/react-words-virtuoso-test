@@ -11,6 +11,11 @@
 }
 
 .MuiListItemButton-root {
-    padding-left: 0!important;
-    padding-right: 0!important;
+    /* padding-left: 3px!important;
+    padding-right: 0!important; */
+}
+
+.MuiCheckbox-root {
+    /* padding: 0px!important;
+    margin: 0px!important; */
 }

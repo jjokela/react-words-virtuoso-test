@@ -114,18 +114,19 @@ export default function VirtuosoList() {
                             <ListItem
                                 key={user.index}
                                 disableGutters
+                                secondaryAction={
+                                    <Checkbox
+                                        edge="start"
+                                        checked={checked.indexOf(user.index) !== -1}
+                                        tabIndex={-1}
+                                        disableRipple
+                                        inputProps={{ 'aria-labelledby': labelId }}
+                                    />
+                                }
+                                disablePadding
                             ><ListItemButton role={undefined} onClick={handleToggle(user.index)} dense>
-                                    <ListItemIcon>
-                                        <Checkbox
-                                            edge="start"
-                                            checked={checked.indexOf(user.index) !== -1}
-                                            tabIndex={-1}
-                                            disableRipple
-                                            inputProps={{ 'aria-labelledby': labelId }}
-                                        />
-                                    </ListItemIcon>
-                                    <ListItemText id={1} primary={`${user.word}`} secondary={JSON.parse(user.content)} />                                    
-                                </ListItemButton>                                
+                                    <ListItemText id={1} primary={`${user.word}`} secondary={JSON.parse(user.content)} />
+                                </ListItemButton>
                             </ListItem>
                         </>
                     )
