@@ -88,14 +88,6 @@ export default function TemporaryDrawer() {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <MenuItem onClick={setShowSelected}>
-                                <IconButton
-                                    size="large"
-                                    color="inherit"
-                                >
-                                    <TaskAltIcon />
-                                </IconButton>                                
-                            </MenuItem>
                             <MenuItem onClick={setShowAll}>
                                 <IconButton
                                     size="large"
@@ -103,6 +95,14 @@ export default function TemporaryDrawer() {
                                 >
                                     <AllInclusiveIcon />
                                 </IconButton>
+                            </MenuItem>                            
+                            <MenuItem onClick={setShowSelected}>
+                                <IconButton
+                                    size="large"
+                                    color="inherit"
+                                >
+                                    <TaskAltIcon />
+                                </IconButton>                                
                             </MenuItem>
                         </Toolbar>
                     </AppBar>
