@@ -121,10 +121,11 @@ export default function VirtuosoList() {
                                         tabIndex={-1}
                                         disableRipple
                                         inputProps={{ 'aria-labelledby': labelId }}
+                                        onChange={handleToggle(user.index)} 
                                     />
                                 }
                                 disablePadding
-                            ><ListItemButton role={undefined} onClick={handleToggle(user.index)} dense>
+                            ><ListItemButton role={undefined} dense>
                                     <ListItemText id={1} primary={`${user.word}`} secondary={JSON.parse(user.content)} />
                                 </ListItemButton>
                             </ListItem>
