@@ -113,7 +113,7 @@ export default function VirtuosoList() {
                         <>
                             <ListItem
                                 key={user.index}
-                                disablePadding
+                                disableGutters
                             ><ListItemButton role={undefined} onClick={handleToggle(user.index)} dense>
                                     <ListItemIcon>
                                         <Checkbox
@@ -124,8 +124,8 @@ export default function VirtuosoList() {
                                             inputProps={{ 'aria-labelledby': labelId }}
                                         />
                                     </ListItemIcon>
-                                    <ListItemText id={1} primary={`${user.index} ${user.word}`} secondary={JSON.parse(user.content)} />
-                                </ListItemButton>
+                                    <ListItemText id={1} primary={`${user.word}`} secondary={JSON.parse(user.content)} />                                    
+                                </ListItemButton>                                
                             </ListItem>
                         </>
                     )
