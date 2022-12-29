@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-words-virtuoso-test/static/css/main.17b159c4.css",
+    "main.css": "/react-words-virtuoso-test/static/css/main.7db0176e.css",
     "main.js": "/react-words-virtuoso-test/static/js/main.d6bde782.js",
     "static/js/787.d8629f47.chunk.js": "/react-words-virtuoso-test/static/js/787.d8629f47.chunk.js",
     "index.html": "/react-words-virtuoso-test/index.html",
-    "main.17b159c4.css.map": "/react-words-virtuoso-test/static/css/main.17b159c4.css.map",
+    "main.7db0176e.css.map": "/react-words-virtuoso-test/static/css/main.7db0176e.css.map",
     "main.d6bde782.js.map": "/react-words-virtuoso-test/static/js/main.d6bde782.js.map",
     "787.d8629f47.chunk.js.map": "/react-words-virtuoso-test/static/js/787.d8629f47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.17b159c4.css",
+    "static/css/main.7db0176e.css",
     "static/js/main.d6bde782.js"
   ]
 }
