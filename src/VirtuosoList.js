@@ -5,10 +5,9 @@ import ListSubheader from '@mui/material/ListSubheader'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import React, { useState, useRef, useEffect } from 'react'
-import { clickChange$, showAllChange$, showSelectedChange$ } from "./state";
+import { clickChange$, showAllChange$, showSelectedChange$, checkedCountChange$, setCheckedCount, useCheckedCount, checkedCount$ } from "./state";
 import './VirtuosoList.css';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import Checkbox from '@mui/material/Checkbox';
 
 export default function VirtuosoList() {
@@ -21,6 +20,8 @@ export default function VirtuosoList() {
 
     const [behavior, setBehavior] = useState("auto");
     const [checked, setChecked] = React.useState([]);
+
+    const [checkedC, setCheckedC] = React.useState(0);
 
     const virtuoso = useRef(null);
 
@@ -42,14 +43,19 @@ export default function VirtuosoList() {
         });
     });
 
+    // can't call react hook in a callback (checked state change function), so using the local state workaround
+    useEffect(() => {
+        checkedCount$.subscribe((value) => {
+            console.log('checked count changed');
+            setCheckedC(value);
+        });
+    });
+
     useEffect(() => {
         showAllChange$.subscribe((value) => {
             console.log('show all clicked');
             let { data, groupCounts, groups } = getWords();
-
-            setUsers(data);
-            setGroups(groups);
-            setGroupCounts(groupCounts);
+            setGridStates(data, groups, groupCounts);
         });
     });
 
@@ -57,10 +63,7 @@ export default function VirtuosoList() {
         showSelectedChange$.subscribe((value) => {
             console.log('show selected clicked');
             let { data, groupCounts, groups } = getCheckedWords(checked);
-
-            setUsers(data);
-            setGroups(groups);
-            setGroupCounts(groupCounts);
+            setGridStates(data, groups, groupCounts);
         });
     });
 
@@ -72,13 +75,11 @@ export default function VirtuosoList() {
         if (checkedItems) {
             console.log('setting items');
             setChecked(checkedItems);
+            setCheckedCount(checkedItems.length);
         }
 
         let { data, groupCounts, groups } = getWords();
-
-        setUsers(data);
-        setGroups(groups);
-        setGroupCounts(groupCounts);
+        setGridStates(data, groups, groupCounts);
     }, []);
 
     const handleToggle = (value) => () => {
@@ -87,13 +88,23 @@ export default function VirtuosoList() {
 
         if (currentIndex === -1) {
             newChecked.push(value);
+            // inc
+            setCheckedCount(checkedC + 1);
         } else {
             newChecked.splice(currentIndex, 1);
+            // dec
+            setCheckedCount(checkedC - 1);
         }
         console.log(newChecked);
         setChecked(newChecked);
 
         localStorage.setItem('checked-items', newChecked);
+    };
+
+    const setGridStates = (data, groups, groupCounts) => {
+        setUsers(data);
+        setGroups(groups);
+        setGroupCounts(groupCounts);
     };
 
     return (

@@ -16,8 +16,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
-
-import { setClick, setShowAll, setShowSelected } from './state';
+import { Badge } from '@mui/material';
+import { setClick, setShowAll, setShowSelected, useCheckedCount } from './state';
 
 export default function TemporaryDrawer() {
     const [state, setState] = React.useState({
@@ -95,14 +95,16 @@ export default function TemporaryDrawer() {
                                 >
                                     <AllInclusiveIcon />
                                 </IconButton>
-                            </MenuItem>                            
+                            </MenuItem>
                             <MenuItem onClick={setShowSelected}>
-                                <IconButton
-                                    size="large"
-                                    color="inherit"
-                                >
-                                    <TaskAltIcon />
-                                </IconButton>                                
+                                <Badge color="secondary" overlap="circular" badgeContent={useCheckedCount()} max={99}>
+                                    <IconButton
+                                        size="large"
+                                        color="inherit"
+                                    >
+                                        <TaskAltIcon />
+                                    </IconButton>
+                                </Badge>
                             </MenuItem>
                         </Toolbar>
                     </AppBar>
